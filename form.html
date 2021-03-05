@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="https://landingpagesms-rrmw5ptraq-ew.a.run.app/" method="post" name='myForm'>
+        Input Mobile Phone Number: <input type="text" name='mobileInput'>
+        <input type="submit" id="spotButton">
+    </form>
+</body>
+</html>
+
+<script type='text/javascript'>
+    $('#myForm').submit(function(e){
+    e.preventDefault();
+    $.ajax({
+        url:'https://landingpagesms-rrmw5ptraq-ew.a.run.app/',
+        type:'post',
+        data:$('#myForm').serialize()
+    });
+});
+</script>
